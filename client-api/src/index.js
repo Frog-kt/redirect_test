@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 
 const app = express();
-app.use(cors({ origin: "http://localhost:80"}));
+// app.use(cors({ origin: "http://localhost:80"}));
 
 // コールバックエンドポイント
 app.get("/callback", (req, res) => {
