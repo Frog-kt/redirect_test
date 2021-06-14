@@ -1,9 +1,10 @@
 <script>
 	let promise;
 	const handler = async () => {
-		const uri = "http://localhost:3001/redirect";
+		const uri = "http://localhost:3000/redirect";
 		await fetch(uri, {
 			method: "POST",
+			origin: "http://localhost/",
 			// credentials: "include",
 			// headers: { "Content-Type": "application/json" },
 		})
