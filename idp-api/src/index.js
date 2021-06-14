@@ -13,4 +13,6 @@ app.post("/redirect", (req, res) => {
 	res.redirect("http://localhost:3030/callback", 302);
 });
 
-app.listen(3000);
+app.listen(3001, () => {
+	console.log("IdP api listening on port 3001");
+});

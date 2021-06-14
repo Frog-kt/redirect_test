@@ -7,4 +7,6 @@ app.use(cors());
 // コールバックエンドポイント
 app.get("/callback", (req, res) => {});
 
-app.listen(3000);
+app.listen(3030, () => {
+	console.log("client listening on port 3030");
+});
