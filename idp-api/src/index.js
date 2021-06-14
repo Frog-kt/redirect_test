@@ -2,15 +2,16 @@ const express = require("express");
 const cors = require("cors");
 
 const app = express();
-app.use(cors());
+app.use(cors({ origin: "http://localhost:80"}));
 
 app.get("/", (req, res) => {
 	res.json({ success: true, message: "hello" });
 });
 
 // clientにリダイレクトするエンドポイント
-app.post("/redirect", (req, res) => {
-	res.redirect("http://localhost:3030/callback", 302);
+app.get("/redirect", (req, res) => {
+	console.log("redirect");
+	res.redirect(302, "http://localhost:3030/callback");
 });
 
 app.listen(3001, () => {
