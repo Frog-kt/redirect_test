@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 
 const app = express();
-app.use(cors({ origin: "http://localhost", credentials: true }));
+app.use(cors({ origin: "http://localhost:8080", credentials: true }));
 
 app.get("/", (req, res) => {
 	res.json({ success: true, message: "hello" });

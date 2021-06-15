@@ -4,9 +4,9 @@
     const uri = "http://localhost:3000/redirect";
     await fetch(uri, {
       method: "POST",
-    //   redirect: "manual",
-      // credentials: "include",
-      // headers: { "Content-Type": "application/json" },
+      redirect: "manual",
+      credentials: "include",
+      headers: { "Content-Type": "application/json" },
     })
       .then((result) => {
         console.log("response");
