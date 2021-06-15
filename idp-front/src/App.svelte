@@ -4,13 +4,16 @@
     const uri = "http://localhost:3000/redirect";
     await fetch(uri, {
       method: "POST",
-      redirect: "manual",
-      credentials: "include",
-      headers: { "Content-Type": "application/json" },
+      // redirect: "manual",
+      // credentials: "include",
+      // headers: { "Content-Type": "application/json" },
     })
       .then((result) => {
         console.log("response");
-        console.log(result);
+        // console.log(result);
+        if (result.redirected) {
+          window.location.href = result.url;
+        }
       })
       .catch((err) => {
         console.log("error");
