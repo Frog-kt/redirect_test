@@ -7,8 +7,9 @@ const app = express();
 // コールバックエンドポイント
 app.get("/callback", (req, res) => {
 	console.log("callback");
-	res.header('Access-Control-Allow-Origin', '*') // こちらは*でOK
-	res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE') // こいつが必要だった
+	res.header("Access-Control-Allow-Origin", "*"); // こちらは*でOK
+	// res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE"); // こいつが必要だった
+	// console.log(req);
 	res.json({ success: true });
 });
 
