@@ -11,7 +11,7 @@ app.get("/", (req, res) => {
 // clientにリダイレクトするエンドポイント
 app.post("/redirect", (req, res) => {
 	console.log("redirect");
-	// res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE') // こいつが必要だった
+	res.header("Access-Control-Allow-Origin", "*");
 	res.redirect(302, "http://localhost:3030/callback");
 });
 
